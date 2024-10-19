@@ -1,2 +1,1 @@
-we wrote some thing inside file
-this is second line inside file
+hi i am chetan
