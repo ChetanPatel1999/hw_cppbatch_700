@@ -10,6 +10,5 @@ int main()
     {
         cout<<num<<" * "<<i<<" = "<<(num*i)<<endl;
     }
-
-    return 0;
+  return 0;
 }
