@@ -36,14 +36,8 @@ public:
 };
 int main()
 {
-    student s1, s2, s3, s4;
+    student s1, s2;
     s1.setdata();
-    s2.setdata();
-    s3.setdata();
-    s4.setdata();
     s1.displaymarksheet();
-    s2.displaymarksheet();
-    s3.displaymarksheet();
-    s4.displaymarksheet();
     return 0;
 }
