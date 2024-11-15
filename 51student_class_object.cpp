@@ -20,7 +20,6 @@ public:
     void displaymarksheet() // methods /member fuction
     {
         cout << "student marksheet ........................... " << endl;
-        cout<<"class teacher name : "<<classteacher<<endl;
         cout << "name of student : " << name << endl;
         cout << "rno of student : " << rno << endl;
         cout << "per of student : " << per << endl;
@@ -36,28 +35,34 @@ public:
         }
         cout << "_____________________________________________" << endl;
     }
-    void totalresult()
+    static void totalresult()
     {
         cout << "total result ....." << endl;
         cout << "total pass : " << totalpass << endl;
         cout << "total Fail : " << totalfail << endl;
         cout << "_____________________________________________" << endl;
     }
+    static void disp_class_teachername()
+    {
+        cout<<"class teachar name : "<<classteacher<<endl;
+        cout<<"__________________________________________________"<<endl;
+    }
 };
 int student::totalpass = 0;
 int student::totalfail = 0;
-string student::classteacher="dr. sandeep meshra";
+string student::classteacher = "dr. sandeep meshra";
 int main()
 {
     student s1, s2, s3, s4;
+    student::disp_class_teachername();
     s1.setdata("ram", 1001, 13.67);
-    s2.setdata("rohit", 1002,15.45);
+    s2.setdata("rohit", 1002, 15.45);
     s3.setdata("rohan", 1003, 78.90);
     s4.setdata("kuber", 1004, 80.90);
     s1.displaymarksheet();
     s2.displaymarksheet();
     s3.displaymarksheet();
     s4.displaymarksheet();
-    s1.totalresult();
+    student::totalresult();
     return 0;
 }
