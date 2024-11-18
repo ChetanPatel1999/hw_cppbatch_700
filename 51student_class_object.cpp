@@ -44,14 +44,26 @@ public:
     }
     static void disp_class_teachername()
     {
-        cout<<"class teachar name : "<<classteacher<<endl;
-        cout<<"__________________________________________________"<<endl;
+        cout << "class teachar name : " << classteacher << endl;
+        cout << "__________________________________________________" << endl;
     }
-    static void average(student obj1, student obj2)// obj  s2
+    static void average(student obj1, student obj2) // obj  s2
     {
-        float ave=(obj1.per+obj2.per)/2.0;
-        cout<<"avrage of "<<obj1.name<<" and "<<obj2.name<<" = "<<ave<<endl;
-        cout<<"__________________________________________________________"<<endl;
+        float ave = (obj1.per + obj2.per) / 2.0;
+        cout << "avrage of " << obj1.name << " and " << obj2.name << " = " << ave << endl;
+        cout << "__________________________________________________________" << endl;
+    }
+    static void average(student obj1, student obj2, student obj3) // obj  s2
+    {
+        float ave = (obj1.per + obj2.per + obj3.per) / 3.0;
+        cout << "avrage of " << obj1.name << " and " << obj2.name << " and " << obj3.name << " = " << ave << endl;
+        cout << "__________________________________________________________" << endl;
+    }
+    static void average(student obj1, student obj2, student obj3, student obj4) // obj  s2
+    {
+        float ave = (obj1.per + obj2.per + obj3.per + obj4.per) / 4.0;
+        cout << "avrage of " << obj1.name << " and " << obj2.name << " and " << obj3.name << " and " << obj4.name << " = " << ave << endl;
+        cout << "__________________________________________________________" << endl;
     }
 };
 int student::totalpass = 0;
@@ -61,7 +73,7 @@ int main()
 {
     student s1, s2, s3, s4;
     student::disp_class_teachername();
-    s1.setdata("ram", 1001,70.67);
+    s1.setdata("ram", 1001, 70.67);
     s2.setdata("rohit", 1002, 15.45);
     s3.setdata("rohan", 1003, 78.90);
     s4.setdata("kuber", 1004, 80.90);
@@ -70,7 +82,10 @@ int main()
     s3.displaymarksheet();
     s4.displaymarksheet();
     student::totalresult();
-    student::average(s1,s2);
-    student::average(s2,s3);
+    student::average(s1, s2);
+    student::average(s2, s3);
+    student::average(s1, s2, s3);
+    student::average(s1, s2, s3, s4);
+
     return 0;
 }
