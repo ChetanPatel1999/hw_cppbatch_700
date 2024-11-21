@@ -11,7 +11,7 @@ class student
     static string classteacher;
 
 public:
-    void setdata(string s1, int a, float b) // methods/member fuction
+    student(string s1, int a, float b) // methods/member fuction
     {
         name = s1;
         rno = a;
@@ -71,12 +71,11 @@ int student::totalfail = 0;
 string student::classteacher = "dr. sandeep meshra";
 int main()
 {
-    student s1, s2, s3, s4;
     student::disp_class_teachername();
-    s1.setdata("ram", 1001, 70.67);
-    s2.setdata("rohit", 1002, 15.45);
-    s3.setdata("rohan", 1003, 78.90);
-    s4.setdata("kuber", 1004, 80.90);
+    student s1("ram", 1001, 70.67);
+    student s2("rohit", 1002, 15.45);
+    student s3("rohan", 1003, 78.90);
+    student s4("kuber", 1004, 80.90);
     s1.displaymarksheet();
     s2.displaymarksheet();
     s3.displaymarksheet();

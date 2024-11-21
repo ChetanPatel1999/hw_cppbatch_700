@@ -6,7 +6,10 @@ class complex
     int image;
 
 public:
-    void setcomplex(int a, int b)
+    complex()
+    {
+    }
+    complex(int a, int b)
     {
         real = a;
         image = b;
@@ -32,14 +35,12 @@ public:
 };
 int main()
 {
-    complex c1, c2, c3,c4;
-    c1.setcomplex(3, 7);
-    c2.setcomplex(5, 9);
+    complex c1(12, 5), c2(5, 8), c3, c4;
     c1.display();
     c2.display();
     c3 = complex::sum(c1, c2);
     c3.display();
-    c4=complex::sub(c1,c2);
+    c4 = complex::sub(c1, c2);
     c4.display();
     return 0;
 }
