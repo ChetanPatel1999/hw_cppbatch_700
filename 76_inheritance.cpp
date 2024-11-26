@@ -12,7 +12,7 @@ public:
         cout << "m2 method of A class is called" << endl;
     }
 };
-class B:public A
+class B :public A
 {
 public:
     void m3()
