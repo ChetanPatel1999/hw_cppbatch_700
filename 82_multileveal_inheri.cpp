@@ -15,6 +15,7 @@ class student
 };
 class marks:public student
 {
+    protected:
     int hindi;
     int math;
     public:
@@ -43,7 +44,7 @@ class result:public marks
     public:
     void dispresult()
     {
-        per=(get_hindi_marks()+get_math_marks())/2.0;
+        per=(hindi+math)/2.0;
         cout<<"peecentage : "<<per<<endl;
     }
 };
