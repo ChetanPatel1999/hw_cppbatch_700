@@ -30,6 +30,6 @@ public:
 int main()
 {
     display d1;
-    d1.disp("chetan");
+    d1.disp(12);
     return 0;
 }

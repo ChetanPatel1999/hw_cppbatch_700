@@ -2,10 +2,10 @@
 using namespace std;
 int main()
 {
-    string name,city;
-    name="chetan patel";
-    city="indore";
-    cout<<"my name is "<<name<<endl;
-    cout<<"my city is "<<city;
+    string name,surname,full_name;
+    name="chetan";
+    surname="patel";
+    full_name=name+" "+surname;
+    cout<<"full name :"<<full_name<<endl;
     return 0;
 }
