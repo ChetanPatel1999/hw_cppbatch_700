@@ -1,4 +1,4 @@
-//example of single inheritance
+// example of single inheritance
 #include <iostream>
 using namespace std;
 class emp
@@ -7,7 +7,10 @@ class emp
     float sal;
 
 public:
-    void setemp(int a, float b)
+    emp()
+    {
+    }
+    emp(int a, float b)
     {
         id = a;
         sal = b;
@@ -24,10 +27,12 @@ class prgm : public emp
     string lang;
 
 public:
-    void setprgm(int a, float b, string s)
+    prgm()
+    {
+    }
+    prgm(int a, float b, string s) : emp(a, b)
     {
         lang = s;
-        setemp(a, b);
     }
     void dispprgm()
     {
@@ -38,12 +43,10 @@ public:
 };
 int main()
 {
-    emp e1;
-    e1.setemp(1001, 1200.500);
+    emp e1(1001, 1200.500);
     e1.displayemp();
     cout << "_______________________________________" << endl;
-    prgm p1, p2, p3;
-    p1.setprgm(1001, 50000.45, "java");
+    prgm p1(1001, 50000.45, "java"), p2, p3;
     p1.dispprgm();
     return 0;
 }

@@ -4,7 +4,7 @@ class student
 {
     int rno;
     public:
-    void setrno(int r)
+    student(int r)
     {
         rno=r;
     }
@@ -19,10 +19,10 @@ class marks:public student
     int hindi;
     int math;
     public:
-    void setmarks(int a,int b)
+    marks(int a,int b,int c):student(a)
     {
-        hindi=a;
-        math=b;
+        hindi=b;
+        math=c;
     }
     void dispmarks()
     {
@@ -34,6 +34,10 @@ class result:public marks
 {
     float per;
     public:
+    result(int a,int b,int c):marks(a,b,c)
+    {
+
+    }
     void dispresult()
     {
         per=(hindi+math)/2.0;
@@ -42,9 +46,7 @@ class result:public marks
 };
 int main()
 {
-    result s1,s2;
-    s1.setrno(1234);
-    s1.setmarks(50,35);
+    result s1(1234,50,35);
     s1.disprno();
     s1.dispmarks();
     s1.dispresult();

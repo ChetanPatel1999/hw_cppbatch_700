@@ -1,4 +1,4 @@
-//example of hirarichal inheritance
+// example of hirarichal inheritance
 #include <iostream>
 using namespace std;
 class student
@@ -7,7 +7,7 @@ class student
     string name;
 
 public:
-    void setdata(int a, string s)
+    student(int a, string s)
     {
         rno = a;
         name = s;
@@ -25,7 +25,7 @@ class mathstd : public student
     int chemestry;
 
 public:
-    void setmarks(int a, int b, int c)
+    mathstd(int r, string s, int a, int b, int c) : student(r, s)
     {
         math = a;
         physics = b;
@@ -36,17 +36,17 @@ public:
         cout << "Math marks : " << math << endl;
         cout << "physics marks : " << physics << endl;
         cout << "Chemestry marks : " << chemestry << endl;
-        cout<<"_________________________________________________"<<endl;
+        cout << "_________________________________________________" << endl;
     }
 };
-class comstd :public student
+class comstd : public student
 {
     int bussiness;
     int account;
     int ip;
 
 public:
-    void setmarks(int a, int b, int c)
+    comstd(int r, string s,int a, int b, int c):student(r,s)
     {
         bussiness = a;
         account = b;
@@ -57,20 +57,16 @@ public:
         cout << "bussiness marks : " << bussiness << endl;
         cout << "account marks : " << account << endl;
         cout << "ip marks : " << ip << endl;
-        cout<<"_________________________________________________"<<endl;
+        cout << "_________________________________________________" << endl;
     }
 };
 int main()
 {
-    mathstd s1, s2;
-    s1.setdata(1001, "ram");
-    s1.setmarks(50, 89, 47);
+    mathstd s1(1001, "ram", 50, 89, 47);
     s1.displaydata();
     s1.displaymarks();
 
-    comstd s3,s4;
-    s3.setdata(1001,"shyam");
-    s3.setmarks(67,88,90);
+    comstd s3(1001, "shyam",56, 78, 99);
     s3.displaydata();
     s3.displaymarks();
     return 0;
