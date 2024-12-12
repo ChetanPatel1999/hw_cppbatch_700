@@ -1,1 +1,5 @@
-hi i am chetan
+hi i am chetan patel
+this contain write in file using cpp
+data inside varible
+fourth line inside file
+fifth line inside file
